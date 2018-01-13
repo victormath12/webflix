@@ -3,17 +3,23 @@
   <!-- Navigation Menu -->
   <mat-sidenav mode="side" [opened]="sidebar">
    <!-- menu component -->
+   teste
   </mat-sidenav>
 
   <!-- Application Content -->
   <mat-sidenav-content>
 
    <!-- Header component -->
-    <mat-toolbar color="primary" class="mat-elevation-z3">
-      <mat-toolbar-row>
-        <span>Webflix</span>
-      </mat-toolbar-row>
-    </mat-toolbar>
+   <mat-toolbar color="primary" class="mat-elevation-z3">
+     <mat-toolbar-row>
+       <button mat-icon-button (click)="open()">
+         <mat-icon aria-label="Open Menu Button">menu</mat-icon>
+       </button>
+       <span>Webflix</span>
+     </mat-toolbar-row>
+   </mat-toolbar>
+
+   <webflix-cursos-list [data]="cursos"></webflix-cursos-list>
 
   </mat-sidenav-content>
 

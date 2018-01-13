@@ -7,6 +7,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -19,11 +20,13 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
+
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

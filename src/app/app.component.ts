@@ -19,6 +19,7 @@ export class AppComponent {
 
   open() {
     this.sidebar = !this.sidebar;
+    console.log(this.sidebar);
   }
 
 }
