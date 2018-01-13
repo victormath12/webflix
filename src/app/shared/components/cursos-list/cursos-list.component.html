@@ -1,0 +1,11 @@
+<section class="cursos-container"> 
+
+  <ul class="cursos-list">
+    <li class="cursos-list-item" *ngFor="let curso of listCursos">
+      <p class="titulo"><strong>Titulo:</strong> {{ curso.titulo }}</p>
+      <p class="horas"><strong>Horas:</strong> {{ curso.horas }} horas</p>
+      <p class="descricao"><strong>Descrição:</strong> {{ curso.descricao }}</p>
+    </li>
+  </ul>
+
+</section>
