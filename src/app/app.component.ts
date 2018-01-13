@@ -9,10 +9,16 @@ export class AppComponent {
 
   title = 'app';
 
+  sidebar: Boolean = false;
+
   cursos = [
     {titulo: 'AngularJS', horas: 21, descricao: 'Cursos de AngularJS para portais'},
     {titulo: 'C# .NET', horas: 21, descricao: 'Cursos de C# para desktop'},
     {titulo: 'Java JSF', horas: 21, descricao: 'Cursos de Java com primefaces'}
   ];
+
+  open() {
+    this.sidebar = !this.sidebar;
+  }
 
 }
