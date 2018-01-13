@@ -1,5 +1,11 @@
-<p>
-  cursos works!
-</p>
+<section class="cursos-container">
 
-<app-curso-detalhe></app-curso-detalhe>
+  <h1>Nossos Cursos:</h1>
+
+  <ul class="cursos-list">
+    <li *ngFor="let curso of cursos">
+      <app-curso-detalhe></app-curso-detalhe>
+    </li>
+  </ul>
+
+</section>
