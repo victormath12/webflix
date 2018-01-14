@@ -1,0 +1,39 @@
+@import "../../../../assets/styles/colors";
+
+.webflix-header{
+ background: $COLOR_PRIMARY;
+ border-bottom:2px solid $COLOR_PRIMARY_SHADOW;
+ margin-bottom:40px;
+}
+
+.header-hamburguer{
+ width:5%;
+}
+
+.header-brand{
+ width:12%;
+ padding-top: 7px;
+}
+
+.header-search{
+ width:40%;
+ padding-top:10px;
+ font-size: 12px;
+
+   .header-search-input{
+    width: 90%
+   }
+
+}
+
+.header-nav{
+ width:27%;
+ float: right;
+}
+
+.header-profile{
+ width:15%;
+ height: 100%;
+ background: $COLOR_PRIMARY_SHADOW;
+ float: right;
+}
