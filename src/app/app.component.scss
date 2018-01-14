@@ -1,7 +1,16 @@
+@import "../assets/styles/colors";
+
 .app-container {
+ background: none;
  position: absolute;
  top: 0;
  bottom: 0;
  left: 0;
  right: 0;
+}
+
+.app-sidenav {
+ width:20%;
+ background: $COLOR_WHITE;
+ color: $COLOR_BLACK;
 }

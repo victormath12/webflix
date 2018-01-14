@@ -1,46 +1,21 @@
 <mat-sidenav-container class="app-container">
 
-  <!-- Navigation Menu -->
-  <mat-sidenav mode="side" [opened]="sidebar">
-   <!-- menu component -->
-   teste
+  <!-- navigation menu -->
+  <mat-sidenav mode="side" opened="false" class="app-sidenav">
+    <webflix-menu></webflix-menu>
   </mat-sidenav>
 
-  <!-- Application Content -->
-  <mat-sidenav-content>
+  <!-- application container -->
+  <mat-sidenav-content class="app-container">
 
-   <!-- Header component -->
-   <mat-toolbar color="primary" class="mat-elevation-z3">
-     <mat-toolbar-row>
-       <button mat-icon-button (click)="open()">
-         <mat-icon aria-label="Open Menu Button">menu</mat-icon>
-       </button>
-       <span>Webflix</span>
-     </mat-toolbar-row>
-   </mat-toolbar>
+    <!-- header -->
+    <webflix-header></webflix-header>
 
-   <webflix-cursos-list [data]="cursos"></webflix-cursos-list>
+    <!-- Cursos List -->
+    <webflix-cursos-list [data]="cursos"></webflix-cursos-list>
+    
+    <webflix-cursos-list [data]="cursos"></webflix-cursos-list>
 
   </mat-sidenav-content>
 
 </mat-sidenav-container>
-
-
-<!--
-<mat-grid-list cols="1" rowHeight="100">
-
- <mat-grid-tile colspan="1" rowspan="1" [style.background]="'red'">
-   <h1 class="">NOSSOS CURSOS</h1>
- </mat-grid-tile>
-
- <mat-grid-tile colspan="1" rowspan="1" [style.background]="'red'">
-   <mat-card>
-    <mat-card-title>Simple card</mat-card-title>
-   </mat-card>
- </mat-grid-tile>
- 
-</mat-grid-list>
-
-
-<webflix-cursos-list [data]="cursos"></webflix-cursos-list>
--->
