@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable, Subject } from 'rxjs/Rx';
 
 @Component({
   selector: 'webflix-cursos-list',
@@ -7,15 +9,26 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CursosListComponent implements OnInit {
 
-  /**
-   * Lista de Cursos (Object List)
-   * Exemplo:
-   * `[ {titulo: 'AngularJS', horas: 21, descricao: 'Cursos de AngularJS para portais'} ]`
-   */
-  @Input('data')
-  listCursos: Object[];
+  cursos: Observable<any[]>;
 
-  constructor() { }
+  cursosJava: Observable<any[]>;
+
+  category: string;
+
+  constructor(private db: AngularFirestore) {
+
+    this.cursos = this.getCursosDB();
+    this.cursosJava = this.getCursosJava();
+
+  }
+
+  getCursosDB(): Observable<any[]> {
+    return this.db.collection('cursos').valueChanges();
+  }
+
+  getCursosJava(): Observable<any[]> {
+    return this.db.collection('cursos', ref => ref.where('categoria', '==', 'java')).valueChanges();
+  }
 
   ngOnInit() { }
 

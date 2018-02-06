@@ -5,7 +5,7 @@
 
   <mat-grid-list cols="5" rowHeight="360px" gutterSize="1em">
 
-    <mat-grid-tile class="cursos-list-item" *ngFor="let curso of listCursos">
+    <mat-grid-tile class="cursos-list-item" *ngFor="let curso of cursos | async">
       <mat-card class="mat-elevation-z3">
         <img mat-card-image [attr.src]="curso.imagem" alt="Photo of a Shiba Inu">
         <mat-card-content>
