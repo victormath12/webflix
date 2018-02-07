@@ -10,6 +10,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+
+/** Services */
+import { ValidationService } from './services/validation.service';
 
 /** Webparts */
 import { HeaderComponent } from './webparts/header/header.component';
@@ -29,19 +33,23 @@ import { CursosListComponent } from './components/cursos-list/cursos-list.compon
     MatSidenavModule,
     MatCardModule,
     MatAutocompleteModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule
   ],
   declarations: [
     CursosListComponent,
     HeaderComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
   ],
   exports: [
     CursosListComponent,
     HeaderComponent,
     FooterComponent,
     MenuComponent
+  ],
+  providers: [
+    ValidationService
   ]
 })
 export class SharedModule { }

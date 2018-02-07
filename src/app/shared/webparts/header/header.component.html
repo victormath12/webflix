@@ -19,10 +19,17 @@
     </div>
 
     <div class="header-nav">
-      <button mat-button>
+
+      <button mat-button [matMenuTriggerFor]="categoriasDropdown">
         <mat-icon aria-hidden="true">view_module</mat-icon>
         Categorias
       </button>
+      <mat-menu #categoriasDropdown="matMenu">
+        <button *ngFor="let categoria of categorias | async" mat-menu-item>
+          {{ categoria.categoria }}
+        </button>
+      </mat-menu>
+
       <button mat-button>
         <mat-icon aria-hidden="true">school</mat-icon>
         Torne-se um Instrutor
