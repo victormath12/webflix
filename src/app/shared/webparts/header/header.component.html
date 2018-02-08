@@ -37,6 +37,26 @@
     </div>
 
     <div class="header-profile">
+
+      <section class="profile-logged" *ngIf="usuarioLogado">
+        <div class="header-profile-avatar">
+          <img src="{{ usuarioLogado.avatar }}" class="avatar" />
+        </div>
+        <div class="header-profile-info">
+          <h1>Olá, {{ usuarioLogado.nome }}!</h1>
+          <h2>Minha conta</h2>
+        </div>
+      </section>
+
+      <section class="profile-no-logged" *ngIf="!usuarioLogado">
+        <button mat-raised-button (click)="login()">
+          Login
+        </button>
+        <button mat-raised-button color="accent" (click)="logout()">
+          Cadastre-se
+        </button>
+      </section>
+
     </div>
 
   </mat-toolbar-row>
