@@ -1,5 +1,4 @@
-import { async } from '@angular/core/testing';
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'webflix-root',
@@ -8,20 +7,11 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'app';
-
   sidebar: Boolean = false;
-
-  filterCursosAngular: Object;
-
-  filterCursosJava: Object;
 
   constructor() { }
 
-  ngOnInit() {
-    this.filterCursosAngular = {key: 'categoria', value: 'angular'};
-    this.filterCursosJava = {key: 'categoria', value: 'java'};
-  }
+  ngOnInit() { }
 
   open() {
     this.sidebar = !this.sidebar;
