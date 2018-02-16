@@ -3,7 +3,8 @@
 .webflix-header{
  background: $COLOR_PRIMARY;
  border-bottom: 0.125rem solid $COLOR_PRIMARY_SHADOW;
- margin-bottom: 2.5rem;
+ position: fixed;
+ z-index:1000;
 }
 
 .header-hamburguer{

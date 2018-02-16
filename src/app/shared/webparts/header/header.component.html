@@ -7,7 +7,7 @@
       </button>
     </div>
 
-    <div class="header-brand">
+    <div class="header-brand" (click)="home()">
      <img src="assets\images\logo.fw.png" />
     </div>
 
@@ -30,9 +30,9 @@
         </button>
       </mat-menu>
 
-      <button mat-button>
+      <button mat-button (click)="cursos()">
         <mat-icon aria-hidden="true">school</mat-icon>
-        Torne-se um Instrutor
+        Todos os Cursos
       </button>
     </div>
 
@@ -52,7 +52,7 @@
         <button mat-raised-button (click)="login()">
           Login
         </button>
-        <button mat-raised-button color="accent" (click)="logout()">
+        <button mat-raised-button color="accent" (click)="singup()">
           Cadastre-se
         </button>
       </section>

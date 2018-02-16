@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable, Subject } from 'rxjs/Rx';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -21,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
   private providerAuth: firebase.auth.GoogleAuthProvider;
 
-  constructor(private db: AngularFirestore, public fbAuth: AngularFireAuth) {
+  constructor(private db: AngularFirestore, public fbAuth: AngularFireAuth, public router: Router) {
 
     this.categoriasCollection = db.collection<any>(this.collectionName);
 
@@ -35,7 +36,6 @@ export class HeaderComponent implements OnInit {
     };*/
 
     this.providerAuth = new firebase.auth.GoogleAuthProvider();
-    //this.providerAuth.addScope('user');
 
     this.categorias = this.listCategorias();
 
@@ -66,8 +66,16 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  logout() {
-    this.fbAuth.auth.signOut();
+  singup() {
+    this.router.navigate(['/login']);
+  }
+
+  cursos() {
+    this.router.navigate(['/cursos']);
+  }
+
+  home() {
+    this.router.navigate(['/']);
   }
 
 }
